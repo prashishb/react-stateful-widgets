@@ -24,15 +24,15 @@ export default function Squares() {
   // 'activeSquare'. One holds the _array_ of square ids, and the other keeps track
   // of the currently active square. On page load there's no active square,
   // so the value of 'activeSquare' should be null.
-  const [squares] = useState(listOfSquareIds)
-  const [activeSquare, setActiveSquare] = useState(null)
+  const [squares] = useState(listOfSquareIds);
+  const [activeSquare, setActiveSquare] = useState(null);
 
   const getClassName = id => {
     // This is NOT a click handler but a helper, used inside the JSX (see below).
     // It should return a string containing the class name of 'active', if the id passed
     // as the argument matches the active square in state, empty string otherwise.
     // Right-click and "inspect element" on the square to see its effect.
-    return id === activeSquare ? ' active' : ''
+    return id === activeSquare ? ' active' : '';
   };
 
   const markActive = id => {
@@ -40,7 +40,7 @@ export default function Squares() {
     // Set the id argument to become the active id in state
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
-    id === activeSquare ? setActiveSquare(null) : setActiveSquare(id)
+    id === activeSquare ? setActiveSquare(null) : setActiveSquare(id);
   };
 
   return (

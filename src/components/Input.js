@@ -38,7 +38,7 @@ import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Input() {
   /* STEP 1 */
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState('');
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
@@ -46,11 +46,11 @@ export default function Input() {
     const { value } = evt.target;
 
     /* STEP 4 */
-    setInputValue(value)
+    setInputValue(value);
   };
   const reset = () => {
     /* STEP 5 */
-    setInputValue('')
+    setInputValue('');
   };
 
   const style = {
